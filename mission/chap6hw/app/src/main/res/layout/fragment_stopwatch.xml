@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StopwatchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_stopwatch"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tap_stopwatch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:tabTextColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/btn_rap"
+            app:layout_constraintEnd_toStartOf="@id/btn_start"
+            app:layout_constraintTop_toTopOf="@id/btn_rap"
+            app:layout_constraintBottom_toBottomOf="@id/btn_rap"
+            android:background="@color/black"/>
+
+        <Button
+            android:id="@+id/btn_rap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#373535"
+            android:text="랩"
+            android:textColor="@color/text_color2"
+            app:layout_constraintLeft_toLeftOf="@id/vp_stopwatch"
+            app:layout_constraintTop_toBottomOf="@id/vp_stopwatch" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2C682E"
+            android:text="시작"
+            android:textColor="#0CE80C"
+            app:layout_constraintRight_toRightOf="@id/vp_stopwatch"
+            app:layout_constraintTop_toBottomOf="@id/vp_stopwatch"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

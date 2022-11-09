@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">chap2hw</string>
+    <string name="lock_inputpassword">암호를 입력하세요.</string>
+
+    <string name="etc_pay_wallet">지갑</string>
+    <string name="etc_pay_certificate">인증서</string>
+    <string name="etc_pay_send">송금</string>
+    <string name="etc_pay_payment">결재</string>
+    <string name="etc_pay_asset">자산</string>
+    <string name="etc_pay_totalmoney">$1%d원</string>
+    <string name="etc_pay_buyhistory">구매내역</string>
+
+    <string name="etc_menu_gift">선물하기</string>
+    <string name="etc_menu_shop">쇼핑하기</string>
+    <string name="etc_menu_makers">메이커스</string>
+    <string name="etc_menu_friends">프렌즈</string>
+    <string name="etc_menu_emoticon">이모티콘</string>
+    <string name="etc_menu_drawers">톡서랍</string>
+    <string name="etc_menu_mail">메일</string>
+    <string name="etc_menu_calender">캘린더</string>
+    <string name="etc_menu_game">게임</string>
+    <string name="etc_menu_fashion">패션</string>
+    <string name="etc_menu_order">주문하기</string>
+    <string name="etc_menu_ticket">멜론티켓</string>
+    <string name="etc_menu_map">카카오맵</string>
+    <string name="etc_menu_openchat">오픈채팅</string>
+    <string name="etc_menu_namecard">톡명함</string>
+    <string name="etc_menu_allservice">전체서비스</string>
+
+    <string name="etc_ad_ad">AD</string>
+    <string name="etc_ad_title">첫 구매라면 18% 할인!</string>
+    <string name="etc_ad_buy">구매하기</string>
+</resources>

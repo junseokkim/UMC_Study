@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_pay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/pay_background"
+        android:layout_weight="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/tv_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:text="@string/etc_pay_wallet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/iv_payad"
+            app:layout_constraintEnd_toStartOf="@+id/btn_certificate"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_certificate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_baseline_security_24"
+            android:padding="10dp"
+            android:text="@string/etc_pay_certificate"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wallet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_wallet"
+            app:layout_constraintTop_toTopOf="@+id/tv_wallet" />
+
+        <ImageView
+            android:id="@+id/iv_payad"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@id/tv_totalmoney"
+
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintEnd_toEndOf="@+id/btn_certificate"
+            app:layout_constraintStart_toStartOf="@+id/tv_wallet"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wallet"
+            app:srcCompat="@drawable/ad" />
+
+        <ImageView
+            android:id="@+id/iv_kakaopay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_totalmoney"
+            app:layout_constraintEnd_toStartOf="@+id/tv_totalmoney"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/iv_payad"
+            app:layout_constraintTop_toTopOf="@+id/tv_totalmoney"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.15"
+            app:srcCompat="@drawable/ic_kakaopay" />
+
+        <TextView
+            android:id="@+id/tv_totalmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/etc_pay_totalmoney"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/iv_payad"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@+id/iv_kakaopay"
+            app:layout_constraintTop_toBottomOf="@+id/iv_payad" />
+
+        <Button
+            android:id="@+id/btn_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/etc_pay_payment"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_send"
+            app:layout_constraintEnd_toStartOf="@+id/btn_asset"
+            app:layout_constraintStart_toEndOf="@+id/btn_send"
+            app:layout_constraintTop_toTopOf="@+id/btn_send" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/etc_pay_send"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_payment"
+            app:layout_constraintStart_toStartOf="@+id/iv_kakaopay"
+            app:layout_constraintTop_toBottomOf="@+id/iv_kakaopay" />
+
+        <Button
+            android:id="@+id/btn_asset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@android:color/transparent"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/etc_pay_asset"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_payment"
+            app:layout_constraintStart_toEndOf="@+id/btn_payment"
+            app:layout_constraintTop_toTopOf="@+id/btn_payment"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btn_buyhistory"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_outline_shopping_cart_24"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/etc_pay_buyhistory"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_asset"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="@+id/tv_totalmoney"
+            app:layout_constraintTop_toTopOf="@+id/btn_asset" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4" >
+
+    </GridLayout>
+
+    <FrameLayout
+        android:id="@+id/tv_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/img" />
+    </FrameLayout>
+
+</LinearLayout>
+
+<TableRow
+android:id="@+id/second_line"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:weightSum="3"
+android:orientation="horizontal">
+
+<LinearLayout
+    android:id="@+id/web2_1_layout"
+    android:layout_height="200dp"
+    android:layout_weight="1"
+    android:weightSum="15"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="8dp">
+
+    <ImageButton
+        android:id="@+id/web2_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:src="@drawable/webtoon1"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/web2_1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="윈드브레이커"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/web2_1_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="조용석"
+        android:textSize="10sp"
+        android:textColor="@color/gray"/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/web2_2_layout"
+    android:layout_height="200dp"
+    android:layout_weight="1"
+    android:weightSum="15"
+    android:orientation="vertical"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="8dp">
+
+    <ImageButton
+        android:id="@+id/web2_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:src="@drawable/webtoon2"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/web2_2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="소녀의 세계"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/web2_2_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="모랑지"
+        android:textSize="10sp"
+        android:textColor="@color/gray"/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/web2_3_layout"
+    android:layout_height="200dp"
+    android:layout_weight="1"
+    android:weightSum="15"
+    android:orientation="vertical"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="8dp">
+
+    <ImageButton
+        android:id="@+id/web2_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:src="@drawable/webtoon3"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/web2_3_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="백수세끼"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/web2_3_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="치즈"
+        android:textSize="10sp"
+        android:textColor="@color/gray"/>
+
+</LinearLayout>
+
+</TableRow>
+<TableRow
+android:id="@+id/third_line"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:weightSum="3"
+android:orientation="horizontal">
+
+<LinearLayout
+    android:id="@+id/web3_1_layout"
+    android:layout_height="200dp"
+    android:layout_weight="1"
+    android:weightSum="15"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="8dp">
+
+    <ImageButton
+        android:id="@+id/web3_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:src="@drawable/webtoon1"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/web3_1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신화급 귀속 아이템을..."
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/web3_1_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="장선율 / 헤스"
+        android:textSize="10sp"
+        android:textColor="@color/gray"/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/web3_2_layout"
+    android:layout_height="200dp"
+    android:layout_weight="1"
+    android:weightSum="15"
+    android:orientation="vertical"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="8dp">
+
+    <ImageButton
+        android:id="@+id/web3_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:src="@drawable/webtoon2"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/web3_2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버림받은 왕녀의 은밀한..."
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/web3_2_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="헤니 / 성혜림"
+        android:textSize="10sp"
+        android:textColor="@color/gray"/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/web3_3_layout"
+    android:layout_height="200dp"
+    android:layout_weight="1"
+    android:weightSum="15"
+    android:orientation="vertical"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="8dp">
+
+    <ImageButton
+        android:id="@+id/web3_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:src="@drawable/webtoon3"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/web3_3_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="팔이피플"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/web3_3_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="매미 / 희세"
+        android:textSize="10sp"
+        android:textColor="@color/gray"/>
+
+</LinearLayout>
+
+</TableRow>

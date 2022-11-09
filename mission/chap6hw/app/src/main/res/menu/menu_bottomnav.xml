@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_worldtime"
+        android:title="@string/menu_worldtime"
+        android:icon="@drawable/btn_worldtime"/>
+    <item
+        android:id="@+id/menu_alarm"
+        android:title="@string/menu_alarm"
+        android:icon="@drawable/btn_alarm"/>
+    <item
+        android:id="@+id/menu_stopwatch"
+        android:title="@string/menu_stopwatch"
+        android:icon="@drawable/btn_stopwatch"/>
+    <item
+        android:id="@+id/menu_timer"
+        android:title="@string/menu_timer"
+        android:icon="@drawable/btn_timer" />
+</menu>

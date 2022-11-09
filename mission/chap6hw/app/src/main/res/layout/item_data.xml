@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alarm_outline"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_color2"
+    android:paddingBottom="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+        <ImageButton
+            android:id="@+id/btn_deletealarm"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_deletealarm"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/alarm_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오전"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color2"
+            android:paddingBottom="0dp"
+            app:layout_constraintTop_toTopOf="@id/alarm_time"
+            app:layout_constraintBottom_toBottomOf="@id/alarm_time"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/alarm_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textSize="55sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color2"
+            android:paddingBottom="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/alarm_day"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알람"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color2"
+            app:layout_constraintTop_toBottomOf="@id/alarm_day"
+            app:layout_constraintStart_toStartOf="@id/alarm_day"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"/>
+        <Switch
+            android:id="@+id/alarm_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="55dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
