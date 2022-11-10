@@ -21,6 +21,7 @@ class AlarmFragment : Fragment() {
     // 정렬 방법 설정 하기
     val alarmList = arrayListOf<Alarm>()
     val alarmAdpater =AlarmAdapter(alarmList)
+    var judgeEdit: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -50,24 +51,25 @@ class AlarmFragment : Fragment() {
                 alarmAdpater.notifyItemInserted(alarmAdpater.itemCount)
             }
             // edit Button 클릭 시 숨겨진 deleteButton과 편집 버튼 표시
-            /*
             viewBinding.btnEdit.setOnClickListener {
-                alarmAdpater.setChangeMode(object : AlarmAdapter.ChangeMode{
-                    override fun showMode() {
-                        TODO("Not yet implemented")
-                    }
-
-                    override fun editMode() {
-                        TODO("Not yet implemented")
-                    }
-                })
+                changeMode(viewBinding)
+                alarmAdpater
             }
-             */
+
             // add Button 클릭 시 Alarm 생성 창 생성
             viewBinding.btnAdd.setOnClickListener {
                 val mIntent = Intent(requireContext(), AddalarmActivity::class.java)
                 getResultText.launch(mIntent)
             }
+        }
+    }
+
+    fun changeMode(viewBinding: FragmentAlarmBinding) {
+        if(judgeEdit) { // edit모드 시
+            viewBinding.btnEdit.setText("편집")
+        }
+        else {
+            viewBinding.btnEdit.setText("완료")
         }
     }
 }

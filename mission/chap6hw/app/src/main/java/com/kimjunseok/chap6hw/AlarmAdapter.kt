@@ -3,6 +3,7 @@ package com.kimjunseok.chap6hw
 import android.graphics.Color
 import android.provider.ContactsContract.Data
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.AbsListView.MultiChoiceModeListener
 import androidx.core.content.ContextCompat
@@ -11,15 +12,6 @@ import com.kimjunseok.chap6hw.databinding.ItemDataBinding
 
 class AlarmAdapter(private val datalist: ArrayList<Alarm>) : RecyclerView.Adapter<AlarmAdapter.DataViewHolder>() {
 
-    interface ChangeMode {
-        fun editMode()
-        fun showMode()
-    }
-    private lateinit var changeMode: ChangeMode
-
-    fun setChangeMode(changeModeListener: ChangeMode) {
-        changeMode = changeModeListener
-    }
     inner class DataViewHolder(private val viewBinding: ItemDataBinding): RecyclerView.ViewHolder(viewBinding.root){
         fun bind(alarm: Alarm) {
             viewBinding.apply {
@@ -38,6 +30,17 @@ class AlarmAdapter(private val datalist: ArrayList<Alarm>) : RecyclerView.Adapte
                         alarmTime.setTextColor(Color.WHITE)
                     }
                 }
+            }
+        }
+
+        fun changeMode(editjudge: Boolean) {
+            if(editjudge) { // 편집 모드 시
+                viewBinding.btnDeletealarm.visibility = View.GONE
+                viewBinding.alarmChk.visibility = View.VISIBLE
+            }
+            else { // show 모드 시
+                viewBinding.btnDeletealarm.visibility = View.VISIBLE
+                viewBinding.alarmChk.visibility = View.GONE
             }
         }
     }

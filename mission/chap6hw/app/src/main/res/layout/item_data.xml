@@ -48,6 +48,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/alarm_day"/>
         <TextView
+            android:id="@+id/alamr_kind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="알람"
