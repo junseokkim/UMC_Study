@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:background="#6E6D6D">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/white"
+        android:layout_marginBottom="2dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/control_box"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <SeekBar
+            android:id="@+id/seekbar_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/present_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            app:layout_constraintStart_toStartOf="@id/seekbar_music"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_music"/>
+        <TextView
+            android:id="@+id/total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            app:layout_constraintEnd_toEndOf="@id/seekbar_music"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_music"/>
+
+        <ImageButton
+            android:id="@+id/btn_previous"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_previous"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_music"
+            app:layout_constraintStart_toEndOf="@id/btn_previous"
+            />
+        <ImageButton
+            android:id="@+id/btn_pause"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_pause"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/btn_previous"
+            app:layout_constraintEnd_toStartOf="@+id/btn_next"
+            app:layout_constraintStart_toEndOf="@+id/btn_previous"
+            app:layout_constraintTop_toTopOf="@id/btn_previous" />
+
+        <ImageButton
+            android:id="@+id/btn_start"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_start"
+            app:layout_constraintBottom_toBottomOf="@id/btn_previous"
+            app:layout_constraintEnd_toStartOf="@+id/btn_next"
+            app:layout_constraintStart_toEndOf="@+id/btn_previous"
+            app:layout_constraintTop_toTopOf="@id/btn_previous" />
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="88dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_next"
+            app:layout_constraintTop_toTopOf="@id/btn_previous"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -50,26 +50,28 @@ class AlarmFragment : Fragment() {
                 alarmList.add(Alarm(dString, hString, mString, true))
                 alarmAdpater.notifyItemInserted(alarmAdpater.itemCount)
             }
-            // edit Button 클릭 시 숨겨진 deleteButton과 편집 버튼 표시
-            viewBinding.btnEdit.setOnClickListener {
-                changeMode(viewBinding)
-                alarmAdpater
-            }
+        }
+        // edit Button 클릭 시 숨겨진 deleteButton과 편집 버튼 표시
+        viewBinding.btnEdit.setOnClickListener {
+            changeMode(viewBinding)
+            alarmAdpater
+        }
 
-            // add Button 클릭 시 Alarm 생성 창 생성
-            viewBinding.btnAdd.setOnClickListener {
-                val mIntent = Intent(requireContext(), AddalarmActivity::class.java)
-                getResultText.launch(mIntent)
-            }
+        // add Button 클릭 시 Alarm 생성 창 생성
+        viewBinding.btnAdd.setOnClickListener {
+            val mIntent = Intent(requireContext(), AddalarmActivity::class.java)
+            getResultText.launch(mIntent)
         }
     }
 
     fun changeMode(viewBinding: FragmentAlarmBinding) {
         if(judgeEdit) { // edit모드 시
             viewBinding.btnEdit.setText("편집")
+            judgeEdit = false
         }
         else {
             viewBinding.btnEdit.setText("완료")
+            judgeEdit = true
         }
     }
 }

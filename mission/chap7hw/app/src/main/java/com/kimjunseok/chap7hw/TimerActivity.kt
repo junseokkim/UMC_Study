@@ -30,7 +30,7 @@ class TimerActivity : AppCompatActivity() {
                     while(minute != 0 || second != 0) {
                         if(second == 0) {
                             minute--
-                            second = 60
+                            second = 59
                         }
                         else second--
                         handler.post {

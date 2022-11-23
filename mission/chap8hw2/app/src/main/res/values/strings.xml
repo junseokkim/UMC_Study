@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">chap8hw2</string>
+    <string name="title_box">제목을 입력하세요</string>
+    <string name="content_box">내용을 입력하세요</string>
+</resources>
