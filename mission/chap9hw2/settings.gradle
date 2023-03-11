@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // 카카오톡 로그인 api 사용 목적
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/'}
+    }
+}
+rootProject.name = "chap9hw2"
+include ':app'

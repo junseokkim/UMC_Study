@@ -56,20 +56,21 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_marginBottom="8dp"/>
+
     <EditText
         android:id="@+id/et_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/title_box"
-        android:paddingTop="8dp"
+        android:ems="2000"
+        android:gravity="top"
+        android:hint="@string/content_box"
         android:paddingLeft="8dp"
+        android:paddingTop="8dp"
         android:paddingRight="8dp"
         android:paddingBottom="8dp"
-        android:ems="2000"
-        android:hint="@string/content_box"
-        android:gravity="top"
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
 
 </LinearLayout>
